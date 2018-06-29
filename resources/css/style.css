@@ -1,0 +1,265 @@
+html {
+  font-size: 16px;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1{
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+h2{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+h3 {
+  font: 1.2rem;
+  font-weight: bold;
+}
+
+p{
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/*layout classes*/
+
+.container {
+  width: 64rem;
+  margin: 0 auto;
+}
+
+.flexcontainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subcontainer{
+  width: 60%;
+  margin: 2rem 1.5rem;
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.support {
+  max-width: 40%;
+  height: auto;
+  align-items: baseline;
+  margin-top: 2rem ;
+  margin-bottom: 2rem;
+  margin-right: auto;
+  flex-grow: 1;
+  flex-shrink: 2;
+}
+
+
+header{
+ height: 4rem;
+ background-color: #67A1B2;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+.logo img {
+  margin-right: 0.5rem;
+}
+
+.desktopnav{
+  margin-right: 1.5rem;
+}
+
+.desktopnav ul li{
+  display: inline;
+  padding: 0 1rem;
+}
+
+.desktopnav ul li a{
+ text-decoration: none;
+}
+
+.logo {
+  height: 2rem;
+  font-size: 1.2rem;
+}
+
+header #logotext1{
+  font-weight: bold;
+  color: #13171A;
+}
+
+header #logotext2{
+  font-weight: 500;
+  color: #73797F;
+  padding-left: 0.2rem;
+}
+
+.mobilenav {
+  display: none;
+}
+
+@media only screen and (max-width: 560px) {
+  .desktopnav,
+  #banner1,
+  #banner2{
+    display: none;
+  }
+
+  header{
+    justify-content: space-around;
+  }
+
+  header .logo {
+    margin-left: 0;
+  }
+
+  .logo img {
+    margin-right: 0;
+  }
+
+  .mobilenav {
+    display: inline-block;
+    padding: 0 1rem;
+  }
+
+  .mobilenav ul li{
+    display: inline;
+    padding: 0 1rem;
+  }
+
+  .mobilenav ul li a{
+   text-decoration: none;
+  }
+}
+
+
+
+/* Banner */
+
+
+.banner{
+  background-color: #647175;
+}
+
+.banner .subcontainer img{
+  width: 100%;
+}
+
+.banner .support{
+  flex-direction: column;
+}
+
+.banner .support h1 {
+  margin: 1.5rem 0;
+  width: auto;
+}
+
+.banner .support h2 {
+  margin: 1.5rem 0;
+  width: auto;
+}
+
+
+.banner .support button{
+  padding: 0.5rem 0;
+  margin: 1.5rem 0rem;
+  text-align: center;
+  width: 80%;
+  background-color: grey;
+  border: none;
+  font: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+ .banner .support button:hover {
+  text-decoration: underline;
+}
+
+
+/*info section*/
+
+.info{
+  background-color: green;
+}
+
+.info .subcontainer img{
+  width: 100%;
+}
+
+.info .subcontainer h1{
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+#quote-info{
+  margin: 2rem 0;
+}
+
+.info.flexcontainer{
+  align-items: flex-start;
+}
+
+.info .support {
+  flex-direction: column;
+}
+
+.infobox img{
+  width: 35%;
+  height: auto;
+  margin: 1rem 1rem;
+}
+
+#orientation {
+  margin-top: 0;
+
+}
+
+.infotext{
+  width: 65%;
+  height: auto;
+}
+
+.infotext h2,
+.infotext p,
+.infotext a{
+  margin: 1rem auto 1rem 0;
+}
+
+/*courses*/
+
+#course-title{
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.courses{
+  flex-wrap: wrap;
+  margin: 2rem 4.5rem;
+}
+
+.program-box{
+  flex-direction: column;
+  width: 30%;
+  margin: 2rem auto;
+}
+
+.program-box img{
+  width: 100%;
+  height: auto;
+}
+
+.program-details h2{
+  margin: 1rem 0;
+}
+
+.program-details h3, #courses-line{
+  padding: 0.5rem 0;
+}
