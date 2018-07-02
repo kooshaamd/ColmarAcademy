@@ -24,10 +24,16 @@ p{
   font-weight: 400;
 }
 
+ul li{
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
 /*layout classes*/
 
 .container {
-  width: 64rem;
+  max-width: 64rem;
+  height: auto ;
   margin: 0 auto;
 }
 
@@ -38,7 +44,7 @@ p{
 }
 
 .subcontainer{
-  width: 60%;
+  max-width: 60%;
   margin: 2rem 1.5rem;
   flex-grow: 2;
   flex-shrink: 1;
@@ -60,6 +66,7 @@ p{
 
 header{
  height: 4rem;
+ max-width: auto;
  background-color: #67A1B2;
 }
 
@@ -105,42 +112,6 @@ header #logotext2{
 .mobilenav {
   display: none;
 }
-
-@media only screen and (max-width: 560px) {
-  .desktopnav,
-  #banner1,
-  #banner2{
-    display: none;
-  }
-
-  header{
-    justify-content: space-around;
-  }
-
-  header .logo {
-    margin-left: 0;
-  }
-
-  .logo img {
-    margin-right: 0;
-  }
-
-  .mobilenav {
-    display: inline-block;
-    padding: 0 1rem;
-  }
-
-  .mobilenav ul li{
-    display: inline;
-    padding: 0 1rem;
-  }
-
-  .mobilenav ul li a{
-   text-decoration: none;
-  }
-}
-
-
 
 /* Banner */
 
@@ -219,7 +190,6 @@ header #logotext2{
 
 #orientation {
   margin-top: 0;
-
 }
 
 .infotext{
@@ -234,15 +204,21 @@ header #logotext2{
 }
 
 /*courses*/
+.course{
+  flex-direction: column;
+  background-color: Aquamarine;
+  margin: 0 auto;
+}
 
-#course-title{
+.course h1{
     margin: 2rem auto;
     text-align: center;
+    overflow: hidden;
 }
 
 .courses{
   flex-wrap: wrap;
-  margin: 2rem 4.5rem;
+  margin: 0 4.5rem 2rem 4.5rem;
 }
 
 .program-box{
@@ -262,4 +238,225 @@ header #logotext2{
 
 .program-details h3, #courses-line{
   padding: 0.5rem 0;
+}
+
+/*Thesis sectoin*/
+
+.thesis {
+  background-color: CornflowerBlue;
+}
+
+.thesis h1{
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 0 auto;
+  padding-top: 2rem;
+}
+
+.thesis-content{
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.thesis-content.flexcontainer{
+  align-items: flex-start;
+}
+
+.thesis .subcontainer video{
+  width: 100%;
+}
+
+.thesis-content .subcontainer h2{
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.thesis-content .subcontainer p{
+  margin: 0 auto 2rem auto;
+}
+
+.thesis-content .support {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.infotext h2,
+.infotext p{
+  margin: 1rem auto 1rem 0;
+}
+
+/*footer*/
+
+footer{
+  background-color: Plum;
+  overflow: auto;
+}
+
+footer p {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  padding-left: 1.5rem;
+  margin: 1rem 0 2rem 0;
+}
+
+footer ul{
+  display: inline-block;
+  float: right;
+  padding-right: 1.5rem;
+  margin: 1rem 0 2rem 0;
+}
+
+footer ul li{
+  display: inline-block;
+}
+
+/*responsive section mobile*/
+
+@media only screen and (max-width: 560px){
+
+  /*mobile header*/
+  .desktopnav,
+  #logotext1,
+  #logotext2{
+    display: none;
+  }
+
+  header{
+    justify-content: space-around;
+    max-width: 35rem;
+    height: 4rem;
+  }
+
+  header .logo {
+    margin-left: 0;
+  }
+
+  .logo img {
+    margin-right: 0;
+  }
+
+  .mobilenav {
+    display: inline;
+    padding: 0 1rem;
+  }
+
+  .mobilenav ul li{
+    display: inline;
+    padding: 0 1rem;
+  }
+
+  .mobilenav ul li a{
+   text-decoration: none;
+  }
+
+  /*mobile banner*/
+  .banner{
+    max-width: 35rem;
+    flex-direction: column;
+  }
+
+ .banner .subcontainer{
+    max-width: 100%;
+    margin: 0 0;
+  }
+
+  .banner .support {
+      max-width: 100%;
+  }
+
+  .banner .support h1{
+    margin: 2rem 1rem;
+  }
+
+  .banner .support h2{
+    margin: 0 1rem;
+  }
+
+  .banner .support button{
+    margin: 1.5rem 1rem 2rem 1rem;
+  }
+
+  /*mobile info*/
+  .info .subcontainer{
+    display: none;
+  }
+
+  .info .support{
+    max-width: 100%;
+    margin: 1rem 1rem 2rem 1rem;
+  }
+
+  #orientation-box, #campus{
+    margin-bottom: 2rem;
+  }
+
+  /*mobile courses*/
+  .program-box img{
+    display: none;
+  }
+
+  .courses{
+    flex-direction: column;
+    margin: 0 1rem 1.5rem 1rem;
+    width: 100%;
+  }
+
+  .course h1{
+    margin: 2rem auto 1rem auto;
+  }
+
+  .program-box{
+    width: 80%;
+    padding: 1rem 1rem 1.5rem 1rem;
+    background-color: red;
+    margin: 0 1rem 0.5rem 1rem;
+  }
+
+  .program-details h3{
+    display: none;
+  }
+  .program-details p:nth-child(n+1){
+    display: none;
+  }
+
+  /*mobile thesis*/
+
+  .thesis-content.flexcontainer{
+    align-items: center;
+  }
+
+  .thesis-content{
+    max-width: 100%;
+  }
+
+  .thesis-content .subcontainer{
+    margin-top: 1rem;
+    max-width: 100%;
+    width:100%;
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  .thesis-content .subcontainer p,
+  .thesis-content .subcontainer h2,
+  .thesis-content .support{
+    display: none;
+  }
+
+  /*Mobile Footer*/
+
+  footer {
+    overflow: hidden;
+  }
+
+  footer ul{
+    display: none;
+  }
+
+  footer p{
+    width: 100%;
+    float: none;
+    padding: 1rem 1rem;
+    margin: 0 0;
+    text-align: left;
+  }
 }
