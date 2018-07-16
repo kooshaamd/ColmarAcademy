@@ -5,6 +5,7 @@
     <title>Colmar Academy</title>
     <link rel="stylesheet" href="./resources/css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./resources/css/style.css">
   </head>
 
@@ -17,7 +18,7 @@
         <span id="logotext2">Academy</span>
       </div>
       <nav class="desktopnav">
-        <ul>
+        <ul role="presentation">
           <li><a href="#">On Campus</a></li>
           <li><a href="#">Online</a></li>
           <li><a href="#">For Companies</a></li>
@@ -25,7 +26,7 @@
         </ul>
       </nav>
       <nav class="mobilenav">
-        <ul>
+        <ul role="presentation">
           <li><a href="#"><img src="./resources/images/ic-on-campus.svg" alt="on campus"></a></li>
           <li><a href="#"><img src="./resources/images/ic-online.svg" alt="online"></a></li>
           <li><a href="#"><img src="./resources/images/ic-login.svg" alt="sign in"></a></li>
@@ -36,7 +37,7 @@
 
     <!--banner-->
 
-    <div class="banner flexcontainer container">
+    <div class="banner flexcontainer container" role="banner">
       <div class="subcontainer flexcontainer">
         <img src="./resources/images/banner.jpg" alt="banner students studying">
       </div>
@@ -49,7 +50,7 @@
 
     <!--info-->
     <div class="info flexcontainer container">
-      <div class="subcontainer flexcontainer">
+      <div class="subcontainer flexcontainer" role="complementary">
         <img src="./resources/images/information-main.jpg" alt="Main info picture of Emanuel senior strategist at hiring.com">
         <h1>It Doesn't hurt to keep practicing</h1>
         <p>"Curbitur vitae libero in ipsum porttitor consequat. Aliquam et commoo lectus,
@@ -57,32 +58,36 @@
             Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
         <p id="quote-info">Emanuel, Sr Strategist at Hiring.com</p>
       </div>
-      <!--orientation-->
-      <div class="support flexcontainer">
+
+      <div  class="support" role="contentinfo">
+        <!--orientation-->
         <div id="orientation-box" class="infobox flexcontainer">
-          <img id="orientation" src="./resources/images/information-orientation.jpg" alt="orientation info">
+          <img class="desktop-info" id="orientation" src="./resources/images/information-orientation.jpg" alt="orientation info">
+          <img class="mobile-info" id="orientation" src="./resources/images/information-orientation-mobile.jpg" alt="orientation info">
           <div class="infotext">
-            <h2>Orientation date</h2>
+            <h3>Orientation date</h3>
             <p>Tue 10/11 & Wed 10/12:8am-3pm</p>
             <a href="#">Read more</a>
           </div>
         </div>
         <!--campus-->
         <div id="campus" class="infobox flexcontainer">
-          <img src="./resources/images/information-campus.jpg" alt="campus info">
+          <img class="desktop-info" src="./resources/images/information-campus.jpg" alt="campus info">
+          <img class="mobile-info" src="./resources/images/information-campus-mobile.jpg" alt="campus info">
           <div class="infotext">
-            <h2>Our Campus</h2>
+            <h3>Our Campus</h3>
             <p>Find which Campus is close by you</p>
             <a href="#">Read more</a>
           </div>
         </div>
         <!--guest lecturer-->
-        <div class="infobox flexcontainer">
-          <img src="./resources/images/information-guest-lecture.jpg" alt="guest lecturer info">
+        <div id="guest-box" class="infobox flexcontainer">
+          <img class="desktop-info" src="./resources/images/information-guest-lecture.jpg" alt="guest lecturer info">
+          <img  class="mobile-info" src="./resources/images/information-guest-lecture-mobile.jpg" alt="guest lecturer info">
           <div class="infotext">
-            <h2>Our Guest Lecturer</h2>
+            <h3>Our Guest Lecturer</h3>
             <p>Join a keynote with Oliver Sack</p>
-            <p>About music in medical treatment</p>
+            <p>about music in medical treatment</p>
             <a href="#">Read more</a>
           </div>
         </div>
@@ -90,7 +95,7 @@
     </div>
 
     <!--Courses-->
-    <div class="course container flexcontainer">
+    <div class="course container flexcontainer" role="content">
       <h1>Start learning</h1>
       <div class="courses flexcontainer">
         <!--Software engineering-->
@@ -157,7 +162,7 @@
     </div>
 
   <!--Thesis-->
-  <div class="thesis container">
+  <div class="thesis container" role="contentinfo">
     <h1>Thesis exhibit</h1>
     <div class="thesis-content flexcontainer">
       <div class="subcontainer flexcontainer">
@@ -170,7 +175,7 @@
           nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget
           magna laoreet, efficitur dolor consequat, tristique ligula."</p>
       </div>
-      <div class="support flexcontainer">
+      <div id="thesis-support" class="support flexcontainer">
         <!--fisma-->
         <div class="infobox flexcontainer">
           <img src="./resources/images/thesis-fisma.jpg" alt="thesis fisma">
@@ -180,7 +185,7 @@
           </div>
         </div>
         <!--now and then-->
-        <div class="infobox flexcontainer">
+        <div  class="infobox flexcontainer">
           <img src="./resources/images/thesis-now-and-then.jpg" alt="thesis now and then">
           <div class="infotext">
             <h2>Now and Then</h2>

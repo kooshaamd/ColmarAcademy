@@ -15,13 +15,13 @@ h2{
 }
 
 h3 {
-  font: 1.2rem;
+  font: 1.3rem;
   font-weight: bold;
 }
 
 p{
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 300;
 }
 
 ul li{
@@ -54,7 +54,6 @@ ul li{
 
 .support {
   max-width: 40%;
-  height: auto;
   align-items: baseline;
   margin-top: 2rem ;
   margin-bottom: 2rem;
@@ -67,7 +66,7 @@ ul li{
 header{
  height: 4rem;
  max-width: auto;
- background-color: #67A1B2;
+ background-color: #FFC82E;
 }
 
 header .logo {
@@ -91,6 +90,10 @@ header .logo {
 
 .desktopnav ul li a{
  text-decoration: none;
+}
+
+.desktopnav ul li a:visited{
+  color:inherit;
 }
 
 .logo {
@@ -158,7 +161,7 @@ header #logotext2{
 /*info section*/
 
 .info{
-  background-color: green;
+  background-color: #F2F1EF;
 }
 
 .info .subcontainer img{
@@ -179,13 +182,28 @@ header #logotext2{
 }
 
 .info .support {
-  flex-direction: column;
+  max-height: 100%;
+  height: 100%;
+}
+
+.infobox{
+  margin-bottom: 4rem 0;
+  height: 30%;
+  width: 100%;
+}
+
+#guest-box{
+ background-color: #647175;
 }
 
 .infobox img{
   width: 35%;
   height: auto;
   margin: 1rem 1rem;
+}
+
+.mobile-info{
+  display: none;
 }
 
 #orientation {
@@ -198,15 +216,14 @@ header #logotext2{
 }
 
 .infotext h2,
-.infotext p,
-.infotext a{
-  margin: 1rem auto 1rem 0;
+.infotext p{
+  margin: 0.5rem auto 1rem 0;
 }
 
 /*courses*/
 .course{
   flex-direction: column;
-  background-color: Aquamarine;
+  background-color: #E83B1E;
   margin: 0 auto;
 }
 
@@ -242,15 +259,14 @@ header #logotext2{
 
 /*Thesis sectoin*/
 
-.thesis {
-  background-color: CornflowerBlue;
-}
 
 .thesis h1{
   text-align: center;
   width: 100%;
   margin: 0 auto 0 auto;
   padding-top: 2rem;
+  border-top: 0.1rem solid #FFC82E;
+  border-left: 0.1rem solid #FFC82E;
 }
 
 .thesis-content{
@@ -260,6 +276,7 @@ header #logotext2{
 
 .thesis-content.flexcontainer{
   align-items: flex-start;
+  border-left: 0.1rem solid #FFC82E;
 }
 
 .thesis .subcontainer video{
@@ -284,10 +301,14 @@ header #logotext2{
   margin: 1rem auto 1rem 0;
 }
 
+#thesis-support{
+  background: #647175;
+}
+
 /*footer*/
 
 footer{
-  background-color: Plum;
+  background-color: #FFC82E;
   overflow: auto;
 }
 
@@ -390,9 +411,25 @@ footer ul li{
     margin-bottom: 2rem;
   }
 
+  .desktop-info {
+    display: none;
+  }
+
+  .mobile-info{
+    display: inline-block;
+  }
+
+  #guest-box .infotext h3{
+    padding-top: 1rem;
+  }
+
   /*mobile courses*/
   .program-box img{
     display: none;
+  }
+
+  .course{
+    background-color: #F2F1EF;
   }
 
   .courses{
@@ -408,7 +445,7 @@ footer ul li{
   .program-box{
     width: 80%;
     padding: 1rem 1rem 1.5rem 1rem;
-    background-color: red;
+    background-color: #FFC82E;
     margin: 0 1rem 0.5rem 1rem;
   }
 
